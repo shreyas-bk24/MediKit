@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicine Shopping Cart</title>
+    <!-- Link To CSS -->
+    <link rel="stylesheet" href="../static/css/cart.css">
+    <!-- Box Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <!-- Nav -->
+        <div class="nav container">
+            <a href="{{url_for('index')}}" class="logo"><img id="logo" style="height: 6em;" src="../static/img/logo.png"></a>
+            <!-- Cart-Icon -->
+            <i class='bx bx-shopping-bag' id="cart-icon"><p style="font-size: 18px;">Checkout</p></i>
+            <!-- Cart -->
+            <div class="cart">
+                <h2 class="cart-title">Your Cart</h2>
+                <!-- Content -->
+                <div class="cart-content"> 
+                    
+                </div>
+                <!-- Total -->
+                <div class="total">
+                    <div class="total-title">Total</div>
+                    <div class="total-price">Rs 0</div>
+                </div>
+                <!-- Buy Button -->
+                <button type="button" onclick="{{ url_for('buy') }}" id="buy-now" class="btn-buy">Buy Now</button>
+                <!-- Cart Close -->
+                <i class='bx bx-x' id="close-cart"></i>
+            </div>
+        </div>     
+    </header>
+    <!-- Shop -->
+    <section class="shop container">
+        <h2 class="section-title">Shop Products</h2>
+        <!-- Content -->
+        
+        <div class="shop-content">
+            {% for pro in responce %}
+        <!-- Box 1 -->
+        <div class="product-box">
+           
+            <img src="{{ pro.image }}" alt="" class="product-img">
+            <h2 class="product-title">{{ pro.product_name }}</h2>
+            <span class="price">Rs {{ pro.price }}</span>
+            <i class='bx bx-shopping-bag add-cart'></i>
+        </div>
+        {% endfor %}
+        </div>
+      
+    </section>
+  
+    <!-- Link To JS -->
+    <script src="../static/js/cart.js"></script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Payment sheet</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<!--    favicon   -->
+<link rel="apple-touch-icon" sizes="180x180" href="../static/img/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../static/img/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../static/img/favicon/favicon-16x16.png">
+<link rel="manifest" href="../static/img/favicon/site.webmanifest">
+<link rel="stylesheet" href="../static/css/pay_style.css">
+    </head>
+    <body>
+        <center>
+    <form method="post"></form>
+        <h1 class="title">PAYMENT MODE</h1>
+        <br>
+        <div class="frame">
+        <details>
+            <summary class="credit">CREDIT CARD/DEBIT CARD</summary>
+                <center>
+            <div class="detail-content">
+                   <div class="container">
+                    <h1>Confirm Your Payment</h1>
+                    <div class="first-row">
+                        <div class="name">
+                            <h3>Card Hold   er Name</h3>
+                            <div class="input-field" >
+                                <input type="text" id="name">
+                            </div>
+                        </div>
+                        <div class="cvv">
+                            <h3>CVV</h3>
+                            <div class="input-field">
+                                <input type="password" class="input-field" id="cvv" autocomplete="cc-csc" maxlength="3" name="cvv" required tabindex="1" value="" onblur=cvv_validate()>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="second-row">
+                        <div class="card-number">
+                            <h3>Card Number</h3>
+                            <div class="input-field" id="number">
+                                <input type="password" maxlength="16">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="third-row">
+                            <h3>Card Validity</h3>
+                            <div class="selection">
+                                <div class="date">
+                                    <select name="months" id="months">
+                                        <option value="Jan">Jan</option>
+                                        <option value="Feb">Feb</option>
+                                        <option value="Mar">Mar</option>
+                                        <option value="Apr">Apr</option>
+                                        <option value="May">May</option>
+                                        <option value="Jun">Jun</option>
+                                        <option value="Jul">Jul</option>
+                                        <option value="Aug">Aug</option>
+                                        <option value="Sep">Sep</option>
+                                        <option value="Oct">Oct</option>
+                                        <option value="Nov">Nov</option>
+                                        <option value="Dec">Dec</option>
+                                    </select>
+                                    <select name="year" id="year">
+                                        <option value="2025">2025</option>
+                                        <option value="2024">2024</option>
+                                        <option value="2023">2023</option>
+                                        <option value="2022">2022</option>
+                                        <option value="2021">2021</option>
+                                        <option value="2020">2020</option>
+                                        <option value="2019">2019</option>
+                                        <option value="2018">2018</option>
+                                    </select>
+                                </div>
+                            <div class="cards">
+                                <img src="../static/img/master.png" alt="">
+                                <img src="../static/img/rupayy.jpg" alt="">
+                                <img src="../static/img/visa.png" alt="">
+                            </div>
+                            </div>
+                        </div>
+                            <input type="button" value="Make a payment" class="btn-pay">
+                    </div>
+                    </div>
+        </center>
+        </details>
+        <br>
+            <details>
+                <summary class="upi">UPI</summary>
+                <div class="details-content">
+                    <div class="upiOptions">Chose an option</div>
+                    <div>
+                        <input type="radio" name="radio" class="phnpe"> PhonePe<br>
+                        <input type="radio" name="radio" class="gpay"> GPay<br>
+                    </div>
+                </div>
+            </details>
+        <br>
+        <details>
+            <summary class="netbank">Net Banking</summary>
+            <div class="details-content">
+                <input type="radio" name="radio"> State Bank of India<br>
+                <input type="radio" name="radio"> HDFC Bank<br>
+
+            </div>
+        </details>
+        <br>
+        <details>
+            <summary class="cod">Cash on Delivery</summary>
+            <div class="details-content">
+                <input type="radio" name="radio" value="payon">Pay on delivery<br>
+            </div>
+        </details>
+        <br>
+        <a href="{{ url_for('ThankYou') }}"><button type="submit" style="background-color: blue;width:90px;height:30px;color: aliceblue;">Process</button></a>
+    </div>
+</form>
+    </center>
+        <script src="../static/js/validate.js"></script>
+    </body>
+</html>

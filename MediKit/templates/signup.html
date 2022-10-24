@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <link rel="stylesheet" href="../static/css/signup.css">
+    <link href="https://fonts.googleapis.com/css2family" rel="stylesheet">
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!--    favicon   -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../static/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../static/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../static/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../static/img/favicon/site.webmanifest">
+    <title>Sign Up</title>
+</head>
+<body>
+    <div class="signup-box">
+        <h1>SIGN UP</h1>
+        <h4>It's free and only takes a minute</h4>
+        <form method="post" name="signup" onsubmit="return verifyPassword()">
+
+            <label>First Name</label>
+            <input type="text" id="firstname" placeholder="First_name" name="firstname" onblur="firstname_val()" required>
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+            <label>Last Name</label>
+            <input type="text" placeholder="last name" name="lastname" id="lastname" required>
+
+            <label>Email</label>
+            <input type="email" placeholder="" name="email" id="email" onblur="checkEmail();" required>
+
+            <label>Password</label>
+            <input type="password" placeholder="" name="password" id="password" required>
+
+            <label>Confirm Password</label>
+            <input type="password" placeholder="" name="password2" id="password2" required>
+            <span id="message"></span>
+            <input type="submit" id="button" value="Submit">
+            </form>
+    </div>
+    <div id="foot">
+        <p>By clicking the Sign Up button,you agree to our <br>
+        <a href="#">Terms and Condition</a> and <a href="#">Policy Privacy</a>
+        </p>
+        </div><br>
+<p class="para-2">Already have an account?<a href="url_for{'login'}">Login here</a></p>
+<script src="../static/ajax/validate.js"></script>
+</body>
+</html>

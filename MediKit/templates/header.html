@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+    </style>
+    <link rel="stylesheet" href="./static/css/homeStyle.css">
+    <link rel="stylesheet" href="../static/css/footer.css">
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!--    favicon   -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../static/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../static/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../static/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../static/img/favicon/site.webmanifest">
+    <title>Home page</title>
+</head>
+
+<body>
+    <header id="header">
+        <nav class="nav-bar">
+            <ul>
+                <div class="dropdown"><a id="logo" class="dropbtn"><img id="logo_img" src="../static/img/logo.png"></a>
+                    <div class="dropdown-content">
+                        <a href="{{url_for('vendor_login')}}">Vendor login</a>
+                        <a href="{{url_for('vendor_signup')}}">Vendor Sign Up</a>
+                        
+                        {% if current_user.is_authenticated and current_user.super_user %}
+                            <a href="/admin">Admin</a>
+                            <a href="{{ url_for('comp_display') }}">Complaints</a>
+                        {% elif current_user.is_authenticated %}
+                            <a href="{{ url_for('feedback') }}">feedback</a>
+                            <a href="#footer">developers contact</a>
+                        {% endif %}
+                        
+
+                    </div>
+                </div>
+                <a id="home">Home</a>
+                <a href="#section2" id="about">About</a>
+
+                <!-- dropdown menu -->
+                <div class="dropdown">
+                    <a class="dropbtn">Category</a>
+                    <div class="dropdown-content">
+                        <a href="{{ url_for('baby_care') }}">BabyCare</a>
+                        <a href="{{ url_for('personal_care') }}">Personal Care</a>
+                        <a href="{{ url_for('BP') }}">BP Tablets</a>
+                        <a href="{{ url_for('cold_and_cough') }}">Cold and Cough</a>
+                        <a href="{{ url_for('ayurvedic') }}">Ayurvedic</a>
+                        <a href="{{ url_for('first_aid') }}">First Aid</a>
+                        <a href="{{ url_for('diabetic_needs') }}">Diabitic needs</a>
+                        <a href="{{ url_for('house_hold') }}">Household needs</a>
+                        <a href="{{ url_for('others') }}">Others</a>
+                    </div>
+                </div>
+
+                <!-- search bar and buttons -->
+                <form method="get" onsubmit="url_for('search',q=query)">
+                    <input type="text" id="search-bar" name="query" class="search" placeholder="Search your query here"  >
+                </form>
+                <a href="{{url_for('cart')}}" title="cart" id="cart"><img id="cart-img" src="./static/img/cart-alt-1.svg"
+                        alt="cart logo">
+                    {% if current_user.is_authenticated %}
+                        <i><span id="count">{{ count }}</span></i></a>
+                       <a href="{{url_for('logout')}}" title="Logout"><button type="submit" id="logout" value="Login"><img id="logout_img" src="../static/img/logout.png"></button></a>
+                        <a href="{{url_for('profile')}}" title="Profile"><button id="profile" ><img id="img-profile" src="../static/img/whilte_user.png"></button></a>
+                    {% else %}
+                        <a href="{{url_for('login')}}"><button type="submit" id="login" value="Login">login</button></a>
+                        <a href="{{url_for('sign_up')}}"><button id="signup" value="signup">Signup</button></a>
+
+                    {% endif %}
+
+            </ul>
+        </nav>
+    </header>

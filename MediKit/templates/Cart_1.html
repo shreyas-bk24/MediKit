@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--  cdn links -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!--cdn links end-->
+<!--    favicon   -->
+<link rel="apple-touch-icon" sizes="180x180" href="../static/img/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../static/img/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../static/img/favicon/favicon-16x16.png">
+<link rel="manifest" href="../static/img/favicon/site.webmanifest">
+
+  <link rel="stylesheet" href="../static/css/cart_1.css">
+
+    <title>Cart ({{ count }})</title>
+</head>
+<body>
+    <div class="card">
+        <div class="row">
+            <div class="col-md-8 cart">
+                <div class="title">
+                    <div class="row">
+                        <div class="col"><h4><b>Shopping Cart</b></h4></div>
+                        <div class="col align-self-center text-right text-muted">{{ count }} items</div>
+                    </div>
+                </div>    
+                {% for pro in responce %}
+                <div class="row border-top border-bottom" class="itm-div" id="item">
+                    <div id="ech-item" class="row main align-items-center">
+                        <div class="col-2"><img class="img-fluid" src="{{ pro.image }}"></div>
+                        <div class="col">
+                            <div class="row text-muted">{{ pro.category }}</div>
+                            <div class="row">{{ pro.product_name }}</div>
+                        </div>
+                        <div class="col">
+                            <!-- <a href="#">-</a><a href="#" class="border">1</a><a href="#">+</a> -->
+
+                            <input type="number" class="qty" pro_id="{{ pro.id }}" price="{{ pro.price }}" name="qty" id="qty" value="{{ pro.quantity }}" min="1" style="width: 50px;">
+                        </div>
+                        <div class="col">&#8377; <span class="price" id="price">{{ pro.price * pro.quantity }}</span> <button value="{{ pro.id }}" class="remove"><span class="close">&#10005;</span></button></div>
+                    </div>
+                </div>
+                
+                {% endfor %}
+                <div class="back-to-shop"><a href="{{ url_for('index') }}">&leftarrow;</a><span class="text-muted">Back to shop</span></div>
+            </div>
+            <div class="col-md-4 summary">
+                <div><h5><b>Summary</b></h5></div>
+                <hr>
+                <div class="row">
+                    <div class="col" style="padding-left:0;">ITEMS {{ count }}</div>
+                    <div class="col text-right">&#8377; <span id="total">{{ total }}</span></div>
+                </div>
+                <form>
+                    <p>SHIPPING</p>
+                    <select><option class="text-muted">Standard-Delivery- &#8377; 40.00</option></select>
+                    <p>GIVE CODE</p>
+                    <input id="code" placeholder="Enter your code">
+                </form>
+                <div class="row" style="border-top: 1px solid rgba(0,0,0,.1); padding: 2vh 0;">
+                    <div class="col">TOTAL PRICE</div>
+                    {% if count!=0 %}
+                    <div class="col text-right">&#8377; <span id="g_total">{{ total + 40 }}</span></div>
+                    {% else %}
+                    <div class="col text-right">&#8377; <span id="g_total">{{ total }}</span></div>
+                    {% endif %}
+                </div>
+                <a href="{{ url_for('payment') }}"><button id="checkout" class="btn">CHECKOUT</button></a>
+            </div>
+        </div>
+    </div>
+    
+    <script src="../static/js/cart_1.js"></script>
+    <script src="../static/ajax/update.js"></script>
+</body>
+</html>

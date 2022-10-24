@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+        </style>
+    <!--    favicon   -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../static/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../static/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../static/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../static/img/favicon/site.webmanifest">
+
+    <link rel="stylesheet" href="../static/css/admin_page.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <div id="container">
+            <form method="post">
+                <h1>Enter Product details</h1>
+                <div id="label">
+                    <label for="pname" class="form-label">Product Name</label>
+                    <label for="category" class="form-label">Category</label>
+                    <label for="no_of_product">Number of Product</label>
+                </div>
+                <div id="txt-box">
+
+                    <input type="text" id="pname" name="pname" placeholder="Product name">
+
+                    <select name="category" id="cat" class="form-select">
+                        <option value=1>Baby needs</option>
+                        <option value=2> Personalcare</option>
+                        <option value=3>BP tables</option>
+                        <option value=4>Cold and Cough</option>
+                        <option value=5>Ayurvedic</option>
+                        <option value=6>FirstAid</option>
+                        <option value=7>Diabitic Needs</option>
+                        <option value=8>Household</option>
+                        <option value=9>Other</option>
+                    </select>
+
+                    <input type="text" id="no_of_product" name="no_of_product" placeholder="Ex: 45">
+                </div>
+                <div id="links-label">
+                    <label for="img-url">Image URL</label>
+                    <label for="vendor-id">Vendor ID</label>
+                </div>
+                <div id="links-txtbox">
+                    <input type="text" name="img-url" id="img-url">
+                    <input type="text" value="{{ current_user.id }}" name="VID" id="vendor-id">
+                </div>
+                <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+
+                <div id="pricing-label">
+                    <label for="price">Price</label>
+                    <label for="discount">Discount</label>
+                </div>
+                <div id="pricing-txtbox">
+                    <input type="text" name="price" id="price" required>
+                    <input type="text" name="discount" id="discount" required>
+                </div>
+                <div id="description-label">
+                    <lable for="description">Description</lable>
+                </div>
+                <div id="description-box" name="description">
+                    <textarea id="description" name="description" required></textarea>
+                </div>
+                <div id="btn">
+                    <button type="submit" id="submit-btn" name="submit" onsubmit="{{ url_for('index') }}">Add to databases</button>
+                </div>
+
+        </div>
+        </form>
+    </center>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

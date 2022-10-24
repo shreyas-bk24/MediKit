@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--    favicon   -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../static/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../static/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../static/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../static/img/favicon/site.webmanifest">
+    <title>Feedback</title>
+</head>
+<body>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container">
+    <h1><b>Complaints</b></h1>
+    {% for comp in responce %}
+<div class="row">
+    <div class="col-md-1"></div>
+	<div class="col-md-6">
+		<div id="postlist">
+			<div class="panel">
+                <div class="panel-heading">
+                    <div class="text-center">
+                        <div class="row">
+                            <div class="col-sm-9">
+                                <h3 class="pull-left">{{ comp.user_name }}</h3>
+                            </div>
+                            <div class="col-sm-3">
+                                <h4 class="pull-right">
+                                <small><em>{{ comp.posted_on }}<br></em></small>
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            <div class="panel-body">
+                {{ comp.response }}
+            </div>
+                <div align="right" >
+                 {% if not comp.is_resolved %}
+                <button type="button" class="resolve btn btn-primary" comp_id="{{ comp.id }}">Resolve</button>
+                {% else %}
+                    <button type="button" class="btn btn-success" comp_id="{{ comp.id }}">Resolved</button>
+                {% endif %}
+                    </div>
+            <div class="panel-footer">
+                <span class="label label-default">{{ comp.rating }}</span>
+
+
+            </div>
+        </div>   
+</div>
+</div>
+
+</div>
+{% endfor %}
+</div>
+<script src="../static/ajax/comp.js"></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+{% include('header.html') %}
+
+ 
+    <!-- use for loop to display the all products in the database-->
+    <a href="{{ url_for('baby_care') }}">
+        <h1 id="suggestion-heading">Suggestions -></h1>
+    </a>
+    <div id="container">
+        {% for medicine in medicine%}
+        <div id="suggestion">
+
+            <div id="suggested-div">
+                <img src="{{ medicine.image }}" alt="product-img" id="product-img" title="{{medicine.description}}">
+                <span id="title">{{medicine.product_name}}</span>
+
+                <span id="line">
+                    <hr>
+                </span>
+                <div id="price-div">
+                    <span id="price"><span id="INR">INR.</span>{{medicine.price}}</span>
+                    <span id="discount">{{medicine.Discount}}%</span>
+                </div>
+                <div id="cart-div">
+                    <button type="submit" id="add-to-cart" onclick="add_new({{medicine.id}})">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <div id="last-btn">
+        <button type="submit" name="view_more" id="view_more" align="right">view more</button>
+    </div>
+
+    <!-- baby needs -->
+    <!-- use for loop to display the all products in the database-->
+    <a href="{{ url_for('personal_care') }}">
+        <h1 id="suggestion-heading">Baby needs -></h1>
+    </a>
+    <div id="container">
+        {% for pro in baby_needs %}
+        <div id="suggestion">
+
+            <div id="suggested-div">
+                <img src="{{pro.image}}" alt="product-img" id="product-img" title="#">
+                <span id="title">{{pro.product_name}}</span>
+
+                <span id="line">
+                    <hr>
+                </span>
+                <div id="price-div">
+                    <span id="price"><span id="INR">INR.</span>{{pro.price}}</span>
+                    <span id="discount">{{pro.Discount}}%</span>
+                </div>
+                <div id="cart-div">
+                     <button type="submit" id="add-to-cart" onclick="addToCart({{ pro.id }})">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <div id="last-btn">
+        <button type="submit" name="view_more" id="view_more" align="right" >view more</button>
+    </div>
+
+<!--  personal care  -->
+
+</body>
+
+</html>
