@@ -1,0 +1,101 @@
+/* body{
+    background-image: url("https://cdn.pixabay.com/photo/2021/02/19/04/00/doctor-6029164_960_720.png");
+} */
+body{
+    font-family: sans-serif;
+}
+#container{
+    box-sizing: content-box;
+    width: 420px;
+    height: 480px;
+    padding-top: 60px;
+    margin-top: 50px;
+    border: 2px solid rgb(22, 19, 19);
+}
+h1{
+    margin-top: -40px;
+    font-family: 'Kaushan Script', cursive;
+    letter-spacing: 2px;
+}
+#holder{
+      box-sizing: border-box;
+      width: 300px;
+      height: 390px;
+      border: 1px solid black;
+      padding-top: 15px;
+      border-radius: 25px;
+      background-color:aliceblue;
+}
+
+#username-div{
+     padding-top: 20px;
+}
+
+#password-div{
+    padding-top: 20px;
+}
+
+#username,#id_password{
+       width: 250px;
+       height: 30px;
+       border-radius: 11px;
+       margin-left: 5px;
+       font-size: 15px;
+       padding: 4px;
+       font-style: bold;
+}
+i{
+    margin-left: -30px; 
+    cursor: pointer;
+}
+#username_img{
+    position: absolute;
+    bottom: 8px;
+    left: 10px;
+    width: 30px;
+    height: 30px;
+}
+
+#username,#id_password:placeholder-shown{
+    padding-left: 20px;
+}
+
+
+#login-div{
+    padding-top: 20px;
+    align-items: center;
+    text-align: center;
+}
+
+#login{
+    width:250px;
+    height: 35px;
+    color: aliceblue;
+    font-family: sans-serif;
+    font-weight: bold;
+    letter-spacing: 3px;
+    background-color: rgb(7, 124, 202);
+    text-align: center;
+    border-radius: 15px;
+}
+
+div#login{
+        text-decoration: none;
+        padding-top: 18px;
+        color: rgb(13, 201, 201);  
+    }
+
+#signup-div{
+    box-sizing: border-box;
+    border:none;
+    justify-content: center;
+
+}
+#id_password{
+    padding-left: 20px;
+    padding-right: 8px;
+}
+#id_password{
+    padding-right: 3px;
+    margin-right: 6px;
+}

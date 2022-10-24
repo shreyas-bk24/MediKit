@@ -1,0 +1,137 @@
+body{
+    font-family: 'Poppins', sans-serif; 
+    margin: 0;
+}
+
+#nav-bar{
+    background-color: black;  
+    width: 100%;
+    margin: 0px;
+}
+.nav-bar{
+    margin-top: 0px;
+}
+a#home,a#about{
+    color:whitesmoke;
+}
+
+ul{
+
+    /* background-color:rgb(0, 255, 68); */
+    background: rgb(35, 45, 48);
+    /* background: linear-gradient(90deg, rgba(150,204,140,1) 0%, rgba(19,129,40,1) 18%, rgba(20,135,90,1) 56%, rgba(14,160,173,1) 66%, rgba(0,212,255,1) 100%);  */
+    color:whitesmoke;
+    align-items:center;
+    box-sizing: border-box;
+    width: 100%;
+    height:80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* padding: 0px; */
+    margin-top: 0px;
+}
+
+li{
+    font-family: 'Poppins', sans-serif; 
+    list-style: none;list-style: none;
+}
+
+/* logo styles */
+#logo_img{
+    box-sizing: content-box;
+    margin-top: 18px;
+    width: 150px; 
+}
+/* search bar styles */
+ #search-input {
+    box-sizing: content-box;
+    width: 300px;
+    height: 40px;
+    border-radius:20px;
+}
+/* stylings of the two buttons */
+#login,#signup{
+    box-sizing: content-box;
+    display: flex;
+    align-items: center;
+    padding: 18px;
+    width: 30px;
+    height: 12px;
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+    background:none;
+    border:none;
+    color:whitesmoke
+}
+#login{
+    font-size:16px;
+}
+/* additional styles for signup button */
+#signup{
+    margin-right: 18px;
+    padding:18px;
+    color: whitesmoke;
+    border: 2px solid whitesmoke;
+    border-radius:8px;
+    font-size:15px;
+}
+
+/* styles for placeholder in the search bar */
+:placeholder-shown,:-ms-input-placeholder{
+    align-items: center;
+    padding-left: 35px;
+}
+
+/* styles of the search bar */
+#search-bar {
+    box-sizing: content-box;
+    width: 400px;
+    height: 40px;
+    border-radius: 20px;
+}
+
+/* cart logo styles */
+#cart-img {
+    color: white;
+    width: 60px;
+    height: 60px;
+} 
+/* category dropdown */
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+
+/* styles for dropdown content(hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color:#f9f9f9;
+    min-width:250px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropbtn{
+    color:whitesmoke;
+}
+
+/* links inside dropdown */
+.dropdown-content a{
+    color: rgb(14, 13, 13) ;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* change the color of the drpdown links on hover */
+
+.dropdown-content a:hover{
+    background-color:#f1f1f1;
+}
+
+/* show the dropdown menu on hover */
+.dropdown:hover .dropdown-content{
+    display: block;
+}

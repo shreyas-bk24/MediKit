@@ -1,0 +1,79 @@
+body{
+    background-color: antiquewhite;
+    font-family:Poppins,sans-serif;
+}
+#container{
+    background-color:whitesmoke;
+    box-sizing: content-box;
+    width: 650px;
+    height: 600px;
+}
+h1{
+    padding-top:45px;
+}
+#label,#txt-box{
+    display: flex;
+    justify-content: space-around;
+}
+
+#label,#links-label,#description-label{
+    font-size: 18px;
+}
+#pname,#cat,#no_of_products{
+    padding:11px;
+}
+#links-label,#pricing-label{
+    padding-top :25px;
+}
+#img-url,#vendor-id,#pricing#discount,#price{
+    padding:11px;
+}
+
+#links-label,#links-txtbox,#pricing-label,#pricing-txtbox{
+    display:flex;
+    justify-content:space-around;
+    
+}
+#img-url{
+    width: 275px;
+}
+#vendor-id{
+    width:250px;
+}
+
+#description-label{
+    padding-top: 25px;
+}
+
+#description{
+    box-sizing: border-box;
+    width: 590px;
+    height:50px;
+    box-shadow:  2px 2px 2px rgb(30, 30, 30);
+}
+#btn{
+    padding-top:25px;
+}
+#submit-btn{
+    box-sizing: border-box;
+    width: 350px;
+    height:40px;
+    background-color: rgb(43, 199, 247);
+    border: none;
+    box-shadow:  2px 2px 3px rgb(30, 30, 30);
+}
+
+input:hover{
+    box-shadow:2px 2px 3px rgb(43, 146, 231);
+}
+
+@media only screen and (max-width:768px) {
+    body{
+        font-family: Poppins,sans-serif;
+        width: fit-content;
+    }
+    #container{
+        display: block;
+        ;
+    }
+}

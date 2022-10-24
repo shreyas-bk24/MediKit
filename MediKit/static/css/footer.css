@@ -1,0 +1,13 @@
+footer{
+  background-color: rgb(35, 45, 48);
+}
+#section1{
+  display: grid;
+}
+li{
+  display: flex;
+}
+h2,a{
+  color: aliceblue;
+  margin-left: 30px;
+}

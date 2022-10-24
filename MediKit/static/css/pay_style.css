@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.frame{
+    width: 750px;
+    height: 500px;
+    border: 0px;
+    text-align: left;
+}
+.title{
+    text-align: center;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    font-weight: 100;
+    line-height: 70px;
+    background: rgb(14, 3, 56);
+}
+.credit{
+    
+    font-size: 25px;
+}
+.details-content{
+    transition: 0.5s;
+    font-family: 'Times New Roman';
+}
+.box{
+    align-items: center;
+}
+.container{
+    width: 750px;
+    height: 500px;
+    border: 1px solid;
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    justify-content: space-around;
+}
+.container h1{
+    text-align: center;
+}
+.first-row{
+    display: flex;
+    text-align: left;
+}
+.second-row{
+    text-align: left;
+}
+.third-row{
+    text-align: left;
+}
+.name{
+    width: 100%;
+    margin-right: 40px;
+}
+.input-field{
+    border: 3px solid #999;
+}
+.input-field input{
+    width: 96%;
+    border: none;
+    outline: 100%;
+    padding: 10px;
+    font-size: 18px;
+}
+.selection{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.selection select{
+    padding: 10px 20px;
+}
+.btn-pay{
+    background-color: blue;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 18px;
+    transition: 0.5s;
+}
+.btn-pay:hover{
+    background-color: black;
+}
+.cards img{
+width: 100px;
+}
+.upi{
+    font-size: 25px;
+}
+.upiOptions{
+    font-size: 25px;
+}
+.phnpe{
+    font-size:xx-large;
+}
+.netbank{
+    font-size: 25px;
+}
+.cod{
+    font-size: 25px;
+}
+.details-content{
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+}
