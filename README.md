@@ -1,5 +1,5 @@
 # MediKit
-An online Medical store
+An online Medical store with 3 level users developed with FLASK
 
 <h1>Directories and their Importance</h1>
 The <b>MediKit</b> folder contains two folders and many py files 
@@ -17,10 +17,9 @@ routes.py - it contains views of the other functions like home,index etc.<br>
 UserLogin.py  - it contains views about user functions.<br>
 vendor.py - this file includes functions related to vendor (supplier).<br>
 
-<h1>How to use<h1>
+<h1>How to use <h1>
  <p>If you are a regular user or a customer you can login through the login button displayed on the nav bar<br>
- 
   If you are a new user you can create account using sign up page after successfull sign up you are redirected into the address page,here you have to put the address of your home.</p>
   <br>
   <h3>For vendors /Suppliers<h3>
-    You can login by hovering the mouse on the medikit logo then you can find a link for login into the vendors account<br>
+    You can login by hovering the mouse on the medikit logo then you can find a link for login into the vendors account otherwise you can sign up into the account<br>
