@@ -24,3 +24,6 @@ vendor.py - this file includes functions related to vendor (supplier).<br>
   <h3>For vendors /Suppliers<h3>
     You can login by hovering the mouse on the medikit logo then you can find a link for login into the vendors account otherwise you can sign up into the account<br>
 <h3>Admin</h3 dont have additional login page he will use the user login page to logon the admin account
+
+developed and tested with the colabaration of
+Team MediKit
