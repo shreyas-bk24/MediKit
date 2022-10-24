@@ -2,4 +2,6 @@
 An online Medical store
 
 <h1>Directories and their Importance</h1>
-The **MediKit** folder contains files the static files and templates required for this web application and the baceknd views
+The <b>MediKit</b> folder contains two folders and many py files 
+<b>Templates</b> folder contains all the html templates used for this project
+<b>static</b> this folder includes some other directories that have css,js,ajax and image files respectively
