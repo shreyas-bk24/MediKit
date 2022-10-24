@@ -1,0 +1,282 @@
+{% include('header.html') %}
+  
+
+    <!-- use for loop to display the all products in the database-->
+    <a href="{{ url_for('baby_care') }}">
+        <h1 id="suggestion-heading">Baby needs -></h1>
+    </a>
+    <div id="container">
+        {% for pro in baby_needs %}
+        <div id="suggestion">
+
+            <div id="suggested-div">
+             {% if pro.image == "" %}   
+             <a href="/details/{{ pro.id }}" target="_blank"><img src="../static/img/logo_image.png"  id="product-img" title="#"></a>
+            {% else %}
+            <a href="/details/{{ pro.id }}" target="_blank"><img src="{{ pro.image }}" id="product-img" title="{{ pro.description}}"></a>
+            {% endif %}
+        
+                <span id="title">{{pro.product_name[:18]}}...</span>
+
+                <span id="line">
+                    <hr>
+                </span>
+                <div id="price-div">
+                    <span id="price"><span id="INR">INR.</span>{{pro.price}}</span>
+                    <span id="discount">{{pro.Discount}}%</span>
+                </div>
+
+                <div id="cart-div">
+                      <button type="submit" id="add-to-cart" class="add-to-cart" value="{{pro.id}}" onclick="change()">Add to Cart</button>
+                </div>
+    
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+<!--  personal care  -->
+    <a href="{{ url_for('personal_care') }}">
+        <h1 id="suggestion-heading">Personal care -></h1>
+    </a>
+    <div id="container">
+        {% for pro in personal_care %}
+        <div id="suggestion">
+
+            <div id="suggested-div">
+                <a href="/details/{{ pro.id }}" target="_blank"><img src="{{pro.image}}" alt="product-img" class="image" id="product-img" title="{{ pro.description }}"></a>
+            <div id="name">
+                <span id="title">{{pro.product_name[:18]}}...</span>
+            </div>
+                <span id="line">
+                    <hr>
+                </span>
+                <div id="price-div">
+                    <span id="price"><span id="INR">INR.</span>{{pro.price}}</span>
+                    <span id="discount">{{pro.Discount}}%</span>
+                </div>
+                <div id="cart-div">
+
+                 <button type="submit" id="add-to-cart" class="add-to-cart" value="{{pro.id}}">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- BP TABLETS -->
+   
+    <a href="{{ url_for('BP') }}">
+        <h1 id="suggestion-heading">BP Tablets -></h1>
+    </a>
+    <div id="container">
+        {% for pro in bp %}
+        <div id="suggestion">
+ 
+            <div id="suggested-div">
+                <a href="/details/{{ pro.id }}" target="_blank"><img src="{{pro.image}}" alt="product-img" class="image" id="product-img" title="{{ pro.description }}"></a>
+            <div id="name">
+                <span id="title">{{pro.product_name[:18]}}...</span>
+            </div>
+                <span id="line">
+                    <hr>
+                </span>
+                <div id="price-div">
+                    <span id="price"><span id="INR">INR.</span>{{pro.price}}</span>
+                    <span id="discount">{{pro.Discount}}%</span>
+                </div>
+                <div id="cart-div">
+
+                 <button type="submit" id="add-to-cart" class="add-to-cart" value="{{pro.id}}">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- COLD AND COUGH -->
+    <a href="{{ url_for('cold_and_cough') }}">
+        <h1 id="suggestion-heading">Cold and cough -></h1>
+    </a>
+    <div id="container">
+        {% for pro in cc %}
+        <div id="suggestion">
+
+            <div id="suggested-div">
+                <a href="/details/{{ pro.id }}" target="_blank"><img src="{{pro.image}}" alt="product-img" class="image" id="product-img" title="{{ pro.description }}"></a>
+            <div id="name">
+                <span id="title">{{pro.product_name[:18]}}...</span>
+            </div>
+                <span id="line">
+                    <hr>
+                </span>
+                <div id="price-div">
+                    <span id="price"><span id="INR">INR.</span>{{pro.price}}</span>
+                    <span id="discount">{{pro.Discount}}%</span>
+                </div>
+                <div id="cart-div">
+
+                 <button type="submit" id="add-to-cart" class="add-to-cart" value="{{pro.id}}">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+<!-- ayurvedic -->
+<a href="{{ url_for('ayurvedic') }}">
+    <h1 id="suggestion-heading">Ayurvedic -></h1>
+</a>
+<div id="container">
+    {% for pro in ayur %}
+    <div id="suggestion">
+
+        <div id="suggested-div">
+            <a href="/details/{{ pro.id }}" target="_blank"><img src="{{pro.image}}" alt="product-img" class="image" id="product-img" title="{{ pro.description }}"></a>
+        <div id="name">
+            <span id="title">{{pro.product_name[:18]}}...</span>
+        </div>
+            <span id="line">
+                <hr>
+            </span>
+            <div id="price-div">
+                <span id="price"><span id="INR">INR.</span>{{pro.price}}</span>
+                <span id="discount">{{pro.Discount}}%</span>
+            </div>
+            <div id="cart-div">
+
+             <button type="submit" id="add-to-cart" class="add-to-cart" value="{{pro.id}}">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+
+<!--  first aid -->
+
+<a href="{{ url_for('first_aid') }}">
+    <h1 id="suggestion-heading">First aid -></h1>
+</a>
+<div id="container">
+    {% for pro in first_aid %}
+    <div id="suggestion">
+
+        <div id="suggested-div">
+            <a href="/details/{{ pro.id }}" target="_blank"><img src="{{pro.image}}" alt="product-img" class="image" id="product-img" title="{{ pro.description }}"></a>
+        <div id="name">
+            <span id="title">{{pro.product_name[:18]}}...</span>
+        </div>
+            <span id="line">
+                <hr>
+            </span>
+            <div id="price-div">
+                <span id="price"><span id="INR">INR.</span>{{pro.price}}</span>
+                <span id="discount">{{pro.Discount}}%</span>
+            </div>
+            <div id="cart-div">
+
+             <button type="submit" id="add-to-cart" class="add-to-cart" value="{{pro.id}}">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<!-- diabetic -->
+<a href="{{ url_for('diabetic_needs') }}">
+    <h1 id="suggestion-heading">Diabetic needs -></h1>
+</a>
+<div id="container">
+    {% for pro in sugar %}
+    <div id="suggestion">
+
+        <div id="suggested-div">
+            <a href="/details/{{ pro.id }}" target="_blank"><img src="{{pro.image}}" alt="product-img" class="image" id="product-img" title="{{ pro.description }}"></a>
+        <div id="name">
+            <span id="title">{{pro.product_name[:18]}}...</span>
+        </div>
+            <span id="line">
+                <hr>
+            </span>
+            <div id="price-div">
+                <span id="price"><span id="INR">INR.</span>{{pro.price}}</span>
+                <span id="discount">{{pro.Discount}}%</span>
+            </div>
+            <div id="cart-div">
+
+             <button type="submit" id="add-to-cart" class="add-to-cart" value="{{pro.id}}">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<!-- house hold -->
+<a href="{{ url_for('house_hold') }}">
+    <h1 id="suggestion-heading">Household -></h1>
+</a>
+<div id="container">
+    {% for pro in hh %}
+    <div id="suggestion">
+
+        <div id="suggested-div">
+            <a href="/details/{{ pro.id }}" target="_blank"><img src="{{pro.image}}" alt="product-img" class="image" id="product-img" title="{{ pro.description }}"></a>
+        <div id="name">
+            <span id="title">{{pro.product_name[:18]}}...</span>
+        </div>
+            <span id="line">
+                <hr>
+            </span>
+            <div id="price-div">
+                <span id="price"><span id="INR">INR.</span>{{pro.price}}</span>
+                <span id="discount">{{pro.Discount}}%</span>
+            </div>
+            <div id="cart-div">
+
+             <button type="submit" id="add-to-cart" class="add-to-cart" value="{{pro.id}}">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<!-- others -->
+<a href="{{ url_for('others') }}">
+    <h1 id="suggestion-heading">Others -></h1>
+</a>
+<div id="container">
+    {% for pro in others %}
+    <div id="suggestion">
+
+        <div id="suggested-div">
+            <a href="/details/{{ pro.id }}" target="_blank"><img src="{{pro.image}}" alt="product-img" class="image" id="product-img" title="{{ pro.description }}"></a>
+        <div id="name">
+            <span id="title">{{pro.product_name[:18]}}...</span>
+        </div>
+            <span id="line">
+                <hr>
+            </span>
+            <div id="price-div">
+                <span id="price"><span id="INR">INR.</span>{{pro.price}}</span>
+                <span id="discount">{{pro.Discount}}%</span>
+            </div>
+            <div id="cart-div">
+
+             <button type="submit" id="add-to-cart" class="add-to-cart" value="{{pro.id}}">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<!-- footer -->
+{% include "footer.html" %}
+<!--  next goes here  -->
+
+
+    <script type="text/javascript" src="../static/ajax/addToCart.js"></script>
+    <script type="text/javascript" src="../static/ajax/search.js"></script>
+    <script type="text/javascript" src="../static/ajax/cart_responce.js"></script>
+</body>
+
+</html>
