@@ -33,7 +33,6 @@ If you are a regular user or a customer you can login through the login button d
 ## How to run
 >**Warning** <br>To run this project you must have the latest version of python3
 
-Firstly you have to install all the requirements mentioned in the requirements.txt<br>
 
 >**Warning** <br>Before installing we have to make sure that pip is already installed on your coding environment<br>
 
