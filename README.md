@@ -26,7 +26,7 @@ routes.py - it contains views of the other functions like home,index etc.<br>
 UserLogin.py  - it contains views about user functions.<br>
 vendor.py - this file includes functions related to vendor (supplier).<br>
 
-<h1>How to use <h1>
+<h1>How to use </h1>
  <p>If you are a regular user or a customer you can login through the login button displayed on the nav bar<br>
   If you are a new user you can create account using sign up page after successfull sign up you are redirected into the address page,here you have to put the address of your home.</p>
   <br>
