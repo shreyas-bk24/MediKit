@@ -1,13 +1,11 @@
 # MediKit
 An online Medical store with 3 level users developed with FLASK
 
-## Folder Details
-The MediKit folder contains files the static files and templates required for this web application and the backend views
 
 ## Directories and their Importance
-The *MediKit* folder contains two folders and many py files 
-<b>TEMPLATES</b> folder contains all the html templates used for this project
-<b>STATIC</b> this folder includes some other directories that have css,js,ajax and image files respectively
+The **MediKit** folder contains two folders and many py files,<br>
+**TEMPLATES** folder contains all the html templates used for this project,<br>
+**STATIC** this folder includes some other directories that have css,js,ajax and image files respectively.
 
 <h1>Python files description</h1>
 
@@ -27,19 +25,21 @@ If you are a regular user or a customer you can login through the login button d
 >If you are a new user you can create account using sign up page after successfull sign up you are redirected into the address page,here you have to put the address of your home.</p>
  
 ### For_vendors <br>
-    You can login by hovering the mouse on the medikit logo then you can find a link for login into the vendors account otherwise you can sign up into the account
+>You can login by hovering the mouse on the medikit logo then you can find a link for login into the vendors account otherwise you can sign up into the account<br> vendors can add products to the database.
 
->**Note** <br> Admin dont have additional login page he will use the user login page to logon the admin account
+>**Note** <br> Admin dont have additional login page he will use the user login page to login the admin account.
 
 
 ## How to run
- To run this project you must have the latest version of python3
+>**Note** <br>To run this project you must have the latest version of python3
+
 Firstly you have to install all the requirements mentioned in the requirements.txt<br>
 
-**Warning** Before installing we have to make sure that pip is already installed on your coding environment<br>
+>**Warning** <br>Before installing we have to make sure that pip is already installed on your coding environment<br>
 
 ##
 ## setup pip
+
 
 >To check pip is installed in your environment
 
@@ -115,8 +115,8 @@ flask run
 ```
 
 
-<h4>developed and tested with the colabaration of
-<br>Team MediKit</h4>
+#### developed and tested with the colabaration of
+## Team MediKit
 
 
 
