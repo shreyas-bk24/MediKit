@@ -21,14 +21,15 @@ UserLogin.py  - it contains views about user functions.<br>
 vendor.py - this file includes functions related to vendor (supplier).<br>
 
 ## How to use 
->users
+
+### users
 If you are a regular user or a customer you can login through the login button displayed on the nav bar<br>
-  If you are a new user you can create account using sign up page after successfull sign up you are redirected into the address page,here you have to put the address of your home.</p>
+>If you are a new user you can create account using sign up page after successfull sign up you are redirected into the address page,here you have to put the address of your home.</p>
  
->For_vendors <br>
+### For_vendors <br>
     You can login by hovering the mouse on the medikit logo then you can find a link for login into the vendors account otherwise you can sign up into the account
 
->Admin dont have additional login page he will use the user login page to logon the admin account
+>**Note** <br> Admin dont have additional login page he will use the user login page to logon the admin account
 
 
 ## How to run
@@ -46,7 +47,8 @@ Firstly you have to install all the requirements mentioned in the requirements.t
 pip --version 
 ```
 
-**Note** if no pip version detected.Install pip using this command
+>**Note** <br>
+if no pip version detected.Install pip using this command
 
 ## install pip
 
@@ -86,6 +88,7 @@ python3 -m venv env
 source env/bin/activate
 ```
 ## installing the required packages using requirements.txt
+
 ```py
 pip3 install -r requirements.txt
 ```
@@ -95,12 +98,11 @@ pip3 install -r requirements.txt
 ### To run server on windows
 
 ```shell
-
 $env:FLASK_APP='run.py'
 flask run
 ```
->**Note** 
-if you want development server add this line before run the server by this you can debug the project and trace the errors
+>**Note** <br>
+if you want development server add this line before run the server. By this you can debug the project and trace the errors
 ```bash
 $env:FLASK_ENV='development'
 ```
