@@ -99,7 +99,7 @@ pip3 install -r requirements.txt
 $env:FLASK_APP='run.py'
 flask run
 ```
-**Note** 
+>**Note** 
 if you want development server add this line before run the server by this you can debug the project and trace the errors
 ```bash
 $env:FLASK_ENV='development'
