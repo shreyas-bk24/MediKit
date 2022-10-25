@@ -31,7 +31,7 @@ If you are a regular user or a customer you can login through the login button d
 >Admin dont have additional login page he will use the user login page to logon the admin account
 
 
-<h1>How to run</h1>
+## How to run
  To run this project you must have the latest version of python3
 Firstly you have to install all the requirements mentioned in the requirements.txt<br>
 
@@ -69,7 +69,7 @@ python get-pip.py
 py -m pip install --upgrade pip
 ```
 
->for linux and mac
+>>for linux and mac
 ```py
 python -m pip install --upgrade pip
 ```
