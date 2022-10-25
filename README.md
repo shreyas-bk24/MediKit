@@ -41,6 +41,10 @@ vendor.py - this file includes functions related to vendor (supplier).<br>
 
 <p>To check pip is installed in your environment</p>
 <code>C:\Users\Your Name\AppData\Local\Programs\Python\Python36-32\Scripts>pip --version </code>
+```
+export env:'FLASK_APP'=run.py
+export env:'FLASK_ENV'=development
+```
 
 <h4>developed and tested with the colabaration of
 <br>Team MediKit</h4>
