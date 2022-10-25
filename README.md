@@ -45,11 +45,13 @@ vendor.py - this file includes functions related to vendor (supplier).<br>
 pip --version 
 ```
 
->install 
+>if no pip version detected.Install pip using this command
 
 ```py
 py get-pip.py
 ```
+
+>Set up environment and run the server
 
 ```shell
 export env:'FLASK_APP'=run.py
