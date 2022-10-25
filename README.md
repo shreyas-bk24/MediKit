@@ -46,7 +46,7 @@ Firstly you have to install all the requirements mentioned in the requirements.t
 pip --version 
 ```
 
-:::warn if no pip version detected.Install pip using this command :::
+**Note** if no pip version detected.Install pip using this command
 
 ## install pip
 
@@ -90,12 +90,22 @@ source env/bin/activate
 pip3 install -r requirements.txt
 ```
 ## configure the server and run the application
+ 
+
+### To run server on windows
+~~~
+jrl
+~~~
+
+
+### To run server on linux or mac
 
 ```shell
 export FLASK_APP=run.py
 export FLASK_ENV=development
 flask run
 ```
+
 
 <h4>developed and tested with the colabaration of
 <br>Team MediKit</h4>
