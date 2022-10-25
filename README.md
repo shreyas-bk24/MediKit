@@ -40,7 +40,7 @@ vendor.py - this file includes functions related to vendor (supplier).<br>
 <p>Before installing we have to make sure that pip is already installed on your coding environment</p><br>
 
 <p>To check pip is installed in your environment</p>
-<code>C:\Users\Your Name\AppData\Local\Programs\Python\Python36-32\Scripts>pip --version </code>
+
 ```bash
 export env:'FLASK_APP'=run.py
 export env:'FLASK_ENV'=development
