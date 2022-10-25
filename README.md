@@ -35,7 +35,10 @@ If you are a regular user or a customer you can login through the login button d
  To run this project you must have the latest version of python3
 Firstly you have to install all the requirements mentioned in the requirements.txt<br>
 
->**Warning** Before installing we have to make sure that pip is already installed on your coding environment<br>
+**Warning** Before installing we have to make sure that pip is already installed on your coding environment<br>
+
+##
+## setup pip
 
 >To check pip is installed in your environment
 
@@ -43,8 +46,9 @@ Firstly you have to install all the requirements mentioned in the requirements.t
 pip --version 
 ```
 
->if no pip version detected.Install pip using this command
+**Note** if no pip version detected.Install pip using this command
 
+## install pip
 
 >for windows
 
@@ -58,7 +62,7 @@ py get-pip.py
 python get-pip.py
 ```
 
->updating pip 
+## updating pip to latest version
 
 >for windows
 ```py
@@ -70,7 +74,7 @@ py -m pip install --upgrade pip
 python -m pip install --upgrade pip
 ```
 
->Set up environment and run the server
+## Set up environment and run the server
 
 >creating a virtual env
 ```py
@@ -81,11 +85,11 @@ python3 -m venv env
 ```bash
 source env/bin/activate
 ```
->installing the required packages using requirements.txt
+## installing the required packages using requirements.txt
 ```py
 pip3 install -r requirements.txt
 ```
->configure the server and run the application
+## configure the server and run the application
 
 ```shell
 export FLASK_APP=run.py
