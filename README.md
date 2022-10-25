@@ -93,16 +93,22 @@ pip3 install -r requirements.txt
  
 
 ### To run server on windows
-~~~
-jrl
-~~~
 
+```shell
+
+$env:FLASK_APP='run.py'
+flask run
+```
+**Note** 
+if you want development server add this line before run the server by this you can debug the project and trace the errors
+```bash
+$env:FLASK_ENV='development'
+```
 
 ### To run server on linux or mac
 
 ```shell
 export FLASK_APP=run.py
-export FLASK_ENV=development
 flask run
 ```
 
