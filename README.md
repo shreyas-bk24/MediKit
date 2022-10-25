@@ -46,7 +46,7 @@ Firstly you have to install all the requirements mentioned in the requirements.t
 pip --version 
 ```
 
-**Note** if no pip version detected.Install pip using this command
+:::warn if no pip version detected.Install pip using this command :::
 
 ## install pip
 
