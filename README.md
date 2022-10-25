@@ -70,7 +70,7 @@ python get-pip.py
 py -m pip install --upgrade pip
 ```
 
->>for linux and mac
+>for linux and mac
 ```py
 python -m pip install --upgrade pip
 ```
