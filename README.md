@@ -79,12 +79,12 @@ python -m pip install --upgrade pip
 
 >creating a virtual env
 ```py
-python3 -m venv env
+python3 -m venv .venv
 ```
 
 >activating virtual env
 ```bash
-source env/bin/activate
+source .venv/bin/activate
 ```
 ## installing the required packages using requirements.txt
 
