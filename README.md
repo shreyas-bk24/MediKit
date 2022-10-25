@@ -35,7 +35,7 @@ If you are a regular user or a customer you can login through the login button d
  To run this project you must have the latest version of python3
 Firstly you have to install all the requirements mentioned in the requirements.txt<br>
 
->**Note** Before installing we have to make sure that pip is already installed on your coding environment<br>
+>**Warning** Before installing we have to make sure that pip is already installed on your coding environment<br>
 
 >To check pip is installed in your environment
 
