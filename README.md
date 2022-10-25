@@ -37,11 +37,13 @@ vendor.py - this file includes functions related to vendor (supplier).<br>
 
 <h1>How to run</h1>
 <p>Firstly you have to install all the requirements mentioned in the requirements.txt</p><br>
-<p>Before installing we have to make sure that pip is already installed on your coding envirolment</p><br>
+<p>Before installing we have to make sure that pip is already installed on your coding environment</p><br>
 
+<p>To check pip is installed in your environment</p>
+<code>C:\Users\Your Name\AppData\Local\Programs\Python\Python36-32\Scripts>pip --version </code>
 
-<h2>developed and tested with the colabaration of
-<br>Team MediKit</h2>
+<h4>developed and tested with the colabaration of
+<br>Team MediKit</h4>
 
 
 
