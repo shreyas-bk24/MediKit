@@ -39,14 +39,14 @@ vendor.py - this file includes functions related to vendor (supplier).<br>
 <p>Firstly you have to install all the requirements mentioned in the requirements.txt</p><br>
 <p>Before installing we have to make sure that pip is already installed on your coding environment</p><br>
 
-<p>To check pip is installed in your environment</p>
+>To check pip is installed in your environment
 
-Paste this command on the project terminal
 ```py 
 pip --version 
 ```
 
-install pip
+>install 
+
 ```py
 py get-pip.py
 ```
