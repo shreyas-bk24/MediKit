@@ -1,11 +1,6 @@
 # MediKit
-<<<<<<< HEAD
-An online medical store
-=======
 An online Medical store with 3 level users developed with FLASK
->>>>>>> 152eb70a50f5fc01d23f62c7437d126bac4f3944
 
-<<<<<<< HEAD
 #Folder Details
 The MediKit folder contains files the static files and templates required for this web application and the backend views
 
@@ -36,6 +31,7 @@ vendor.py - this file includes functions related to vendor (supplier).<br>
 
 
 <h1>How to run</h1>
+ To run this project you must have the latest version of python3
 <p>Firstly you have to install all the requirements mentioned in the requirements.txt</p><br>
 <p>Before installing we have to make sure that pip is already installed on your coding environment</p><br>
 
@@ -64,4 +60,4 @@ export env:'FLASK_ENV'=development
 
 
 
->>>>>>> 152eb70a50f5fc01d23f62c7437d126bac4f3944
+
