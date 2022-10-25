@@ -25,7 +25,7 @@ vendor.py - this file includes functions related to vendor (supplier).<br>
 If you are a regular user or a customer you can login through the login button displayed on the nav bar<br>
   If you are a new user you can create account using sign up page after successfull sign up you are redirected into the address page,here you have to put the address of your home.</p>
  
-**For_vendors**
+>For_vendors <br>
     You can login by hovering the mouse on the medikit logo then you can find a link for login into the vendors account otherwise you can sign up into the account
 
 >Admin dont have additional login page he will use the user login page to logon the admin account
@@ -33,8 +33,8 @@ If you are a regular user or a customer you can login through the login button d
 
 <h1>How to run</h1>
  To run this project you must have the latest version of python3
-<p>Firstly you have to install all the requirements mentioned in the requirements.txt</p><br>
-<p>Before installing we have to make sure that pip is already installed on your coding environment</p><br>
+Firstly you have to install all the requirements mentioned in the requirements.txt<br>
+Before installing we have to make sure that pip is already installed on your coding environment<br>
 
 >To check pip is installed in your environment
 
@@ -43,17 +43,48 @@ pip --version
 ```
 
 >if no pip version detected.Install pip using this command
-
+>for windows
 ```py
 py get-pip.py
+```
+>for linux and mac users
+```py
+python get-pip.py
+```
+
+>updating pip 
+
+>for windows
+```py
+py -m pip install --upgrade pip
+```
+
+>for linux and mac
+```py
+python -m pip install --upgrade pip
 ```
 
 >Set up environment and run the server
 
-```shell
-export env:'FLASK_APP'=run.py
-export env:'FLASK_ENV'=development
+>creating a virtual env
+```py
+python3 -m venv env
+```
 
+>activating virtual env
+```bash
+source env/bin/activate
+```
+>installing the required packages using requirements.txt
+```py
+pip3 install -r requirements.txt
+```
+>configure the server and run the application
+
+```shell
+export FLASK_APP=run.py
+export FLASK_ENV=development
+flask run
 ```
 
 <h4>developed and tested with the colabaration of
