@@ -1,6 +1,15 @@
 # MediKit
+<<<<<<< HEAD
+An online medical store
+=======
 An online Medical store with 3 level users developed with FLASK
+>>>>>>> 152eb70a50f5fc01d23f62c7437d126bac4f3944
 
+<<<<<<< HEAD
+#Folder Details
+The MediKit folder contains files the static files and templates required for this web application and the backend views
+
+=======
 <h1>Directories and their Importance</h1>
 The <b>MediKit</b> folder contains two folders and many py files 
 <b>TEMPLATES</b> folder contains all the html templates used for this project
@@ -21,9 +30,19 @@ vendor.py - this file includes functions related to vendor (supplier).<br>
  <p>If you are a regular user or a customer you can login through the login button displayed on the nav bar<br>
   If you are a new user you can create account using sign up page after successfull sign up you are redirected into the address page,here you have to put the address of your home.</p>
   <br>
-  <h3>For vendors /Suppliers<h3>
+  <h3>For vendors [Suppliers]]<h3>
     You can login by hovering the mouse on the medikit logo then you can find a link for login into the vendors account otherwise you can sign up into the account<br>
-<h3>Admin</h3 dont have additional login page he will use the user login page to logon the admin account
+<h3>Admin</h3> dont have additional login page he will use the user login page to logon the admin account
+
+
+<h1>How to run</h1>
+<p>Firstly you have to install all the requirements mentioned in the requirements.txt</p><br>
+<p>Before installing we have to make sure that pip is already installed on your coding envirolment</p><br>
+
 
 <h2>developed and tested with the colabaration of
- Team MediKit</h2>
+<br>Team MediKit</h2>
+
+
+
+>>>>>>> 152eb70a50f5fc01d23f62c7437d126bac4f3944
