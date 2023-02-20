@@ -1,5 +1,5 @@
 # MediKit
-An online Medical store with 3 level users developed with FLASK
+An online Medical store with 3 level users [made up with FLASK]
 
 
 ## Directories and their Importance
