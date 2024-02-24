@@ -1,126 +1,98 @@
+# Ecommerce Medicine Store - Flask Application
 
-Skip to content
+## Introduction
 
-    shreyas-bk24
-    /
-    MediKit
+Welcome to our Ecommerce Medicine Store application! This web application is built using the Flask framework and is designed to facilitate the online sale of medicines. It provides a user-friendly interface for customers to browse, search, and purchase medicines conveniently from the comfort of their homes.
 
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
+## Features
 
-    Settings
+- **User Authentication:** Users can create accounts, log in, and manage their profiles.
+- **Product Catalog:** Browse a wide range of medicines with detailed information.
+- **Search Functionality:** Easily find specific medicines using the search bar.
+- **Shopping Cart:** Add medicines to the cart for a seamless shopping experience.
+- **Order Management:** Track and manage your orders through the user dashboard.
+- **Admin Panel:** Admins can add, edit, and remove products from the catalog.
 
-Editing README.md in MediKit
-Breadcrumbs
+## Installation
 
-    MediKit
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/your-username/medicine-store.git
+   ```
 
-/
-in
-root
+2. **Navigate to the Project Directory:**
+   ```bash
+   cd medicine-store
+   ```
 
-Indent mode
-Indent size
-Line wrap mode
-Editing README.md file contents
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-45
-46
-# MediKit
-An online Medical store with 3 level users [made up with FLASK]
+3. **Create a Virtual Environment:**
+   ```bash
+   python -m venv venv
+   ```
 
+4. **Activate the Virtual Environment:**
+   - For Windows:
+     ```bash
+     venv\Scripts\activate
+     ```
+   - For Unix or MacOS:
+     ```bash
+     source venv/bin/activate
+     ```
 
-## Directories and their Importance
-The **MediKit** folder contains two folders and many py files,<br>
-**TEMPLATES** folder contains all the html templates used for this project,<br>
-**STATIC** this folder includes some other directories that have css,js,ajax and image files respectively.
+5. **Install Dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-<h1>Python files description</h1>
+6. **Configure the Database:**
+   - Update the database URI in `config.py` or set it as an environment variable.
 
-run.py  - this file includes only the run config of the whole project its is the gateway of the web app.<br>
-__init__.py - used to make the project behaves as a package.<br>
-cart.py - includes views and routes related to the cart function.<br>
-category.py - this file includes views of different categories.<br>
-forgot_password.py  - As name suggests this file includes views only belongs to password rest functionality.<br>
-routes.py - it contains views of the other functions like home,index etc.<br>
-UserLogin.py  - it contains views about user functions.<br>
-vendor.py - this file includes functions related to vendor (supplier).<br>
+7. **Run the Application:**
+   ```bash
+   python app.py
+   ```
 
-## How to use 
+8. **Access the Application:**
+   Open your web browser and navigate to [http://localhost:5000](http://localhost:5000).
 
-### users
-If you are a regular user or a customer you can login through the login button displayed on the nav bar<br>
->If you are a new user you can create account using sign up page after successfull sign up you are redirected into the address page,here you have to put the address of your home.</p>
- 
-### For_vendors <br>
->You can login by hovering the mouse on the medikit logo then you can find a link for login into the vendors account otherwise you can sign up into the account<br> vendors can add products to the database.
+## Configuration
 
->**Note** <br> Admin dont have additional login page he will use the user login page to login the admin account.
+- Update configuration settings in `config.py` as needed, such as database URI, secret key, and other application settings.
 
+## Admin Access
 
-## How to run
->**Warning** <br>To run this project you must have the latest version of python3
+To access the admin panel, you need to create an admin account. Use the Flask shell to set the admin role for your account:
 
+```bash
+flask shell
+```
 
->**Warning** <br>Before installing we have to make sure that pip is already installed on your coding environment<br>
+Inside the shell, run the following commands:
 
-##
-## setup pip
+```python
+from app import db, create_app
+from app.models import User, Role
 
+app = create_app()
+app.app_context().push()
 
->To check pip is installed in your environment
+# Replace 'your_username' with your actual username
+user = User.query.filter_by(username='your_username').first()
+user.role = Role.query.filter_by(name='admin').first()
+db.session.commit()
+```
 
-```py 
-pip --version 
-Use Control + Shift + m to toggle the tab key moving focus. Alternatively, use esc then tab to move to the next interactive element on the page.
-Attach files by dragging & dropping, selecting or pasting them.
-Editing MediKit/README.md at root · shreyas-bk24/MediKit
+## Contributing
+
+If you'd like to contribute to the development of this application, please follow our [contribution guidelines](CONTRIBUTING.md).
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+## Support
+
+If you encounter any issues or have questions, please [open an issue](https://github.com/your-username/medicine-store/issues) on our GitHub repository.
+
+Thank you for using our Ecommerce Medicine Store application! Happy shopping!
