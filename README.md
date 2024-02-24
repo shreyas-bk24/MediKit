@@ -17,12 +17,12 @@ Welcome to our Ecommerce Medicine Store application! This web application is bui
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/your-username/medicine-store.git
+   git clone https://github.com/shreyas-bk24/MediKit.git
    ```
 
 2. **Navigate to the Project Directory:**
    ```bash
-   cd medicine-store
+   cd MediKit
    ```
 
 3. **Create a Virtual Environment:**
@@ -50,7 +50,7 @@ Welcome to our Ecommerce Medicine Store application! This web application is bui
 
 7. **Run the Application:**
    ```bash
-   python app.py
+   python run.py
    ```
 
 8. **Access the Application:**
