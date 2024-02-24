@@ -1,3 +1,80 @@
+
+Skip to content
+
+    shreyas-bk24
+    /
+    MediKit
+
+Code
+Issues
+Pull requests
+Actions
+Projects
+Wiki
+Security
+Insights
+
+    Settings
+
+Editing README.md in MediKit
+Breadcrumbs
+
+    MediKit
+
+/
+in
+root
+
+Indent mode
+Indent size
+Line wrap mode
+Editing README.md file contents
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
 # MediKit
 An online Medical store with 3 level users [made up with FLASK]
 
@@ -44,79 +121,6 @@ If you are a regular user or a customer you can login through the login button d
 
 ```py 
 pip --version 
-```
-
->**Note** <br>
-if no pip version detected.Install pip using this command
-
-## install pip
-
->for windows
-
-```py
-py get-pip.py
-```
-
->for linux and mac users
-
-```py
-python get-pip.py
-```
-
-## updating pip to latest version
-
->for windows
-```py
-py -m pip install --upgrade pip
-```
-
->for linux and mac
-```py
-python -m pip install --upgrade pip
-```
-
-## Set up environment and run the server
-
->creating a virtual env
-```py
-python3 -m venv .venv
-```
-
->activating virtual env
-```bash
-source .venv/bin/activate
-```
-## installing the required packages using requirements.txt
-
-```py
-pip3 install -r requirements.txt
-```
-## configure the server and run the application
- 
-
-### To run server on windows
-
-```shell
-$env:FLASK_APP='run.py'
-flask run
-```
->**Note** <br>
-if you want development server add this line before run the server. By this you can debug the project and trace the errors
-```bash
-$env:FLASK_ENV='development'
-```
-
-### To run server on linux or mac
-
-```shell
-export FLASK_APP=run.py
-flask run
-```
-
-
-#### developed and tested with the colabaration of
-#### Team MediKit
-
-
-
-
+Use Control + Shift + m to toggle the tab key moving focus. Alternatively, use esc then tab to move to the next interactive element on the page.
+Attach files by dragging & dropping, selecting or pasting them.
+Editing MediKit/README.md at root · shreyas-bk24/MediKit
