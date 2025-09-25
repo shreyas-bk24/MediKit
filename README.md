@@ -96,3 +96,4 @@ This project is licensed under the [MIT License](LICENSE).
 If you encounter any issues or have questions, please [open an issue](https://github.com/your-username/medicine-store/issues) on our GitHub repository.
 
 Thank you for using our Ecommerce Medicine Store application! Happy shopping!
+
